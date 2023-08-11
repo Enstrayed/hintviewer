@@ -1,0 +1,6 @@
+:8081 {
+    root * ./frontend
+    file_server
+
+    reverse_proxy /TMI/v1* 192.168.12.1:80
+}

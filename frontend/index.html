@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HINT Viewer</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="main.js"></script>
+</head>
+
+<body class="nomargin">
+    <div class="centerthisshit">
+        <div> <!--the shit-->
+            <div class="horizontallyalignthisshit paddingbottom2em">
+                <img src="https://cdn.enstrayed.com/miau.jpg" height="50px" alt="miau" class="paddingright1em">
+                <h1 class="nomargin paddingright1em">HINT Viewer</h1>
+                <button onclick="reloadButton()">reload this shit</button>
+            </div>
+
+            <div class="horizontallyalignthisshit">
+                <div class="paddingright1em">
+                    <h3 class="nomargin">Info</h3>
+                    <table class="tg">
+                        <tbody>
+                            <tr>
+                                <td class="tg-0pky">Has IPv6?</td>
+                                <td class="tg-0pky" id="hasipv6"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">APN</td>
+                                <td class="tg-0pky" id="apn"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">Uptime</td>
+                                <td class="tg-0pky" id="uptime"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Software Version</td>
+                                <td class="tg-0lax" id="softwareversion"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">Serial</td>
+                                <td class="tg-0lax" id="serial"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="paddingright1em">
+                    <h3 class="nomargin">5G</h3>
+                    <table class="tg">
+                        <tbody>
+                            <tr>
+                                <td class="tg-0pky">Band</td>
+                                <td class="tg-0pky" id="5gband"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">RSRP</td>
+                                <td class="tg-0pky" id="5grsrp"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">RSRQ</td>
+                                <td class="tg-0pky" id="5grsrq"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">SINR</td>
+                                <td class="tg-0pky" id="5gsinr"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">RSSI</td>
+                                <td class="tg-0lax" id="5grssi"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="paddingright1em">
+                    <h3 class="nomargin">LTE</h3>
+                    <table class="tg">
+                        <tbody>
+                            <tr>
+                                <td class="tg-0pky">Band</td>
+                                <td class="tg-0pky" id="4gband"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">RSRP</td>
+                                <td class="tg-0pky" id="4grsrp"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">RSRQ</td>
+                                <td class="tg-0pky" id="4grsrq"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">SINR</td>
+                                <td class="tg-0pky" id="4gsinr"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">RSSI</td>
+                                <td class="tg-0lax" id="4grssi"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h3 class="nomargin">Ideal</h3>
+                    <table class="tg">
+                        <tbody>
+                            <tr>
+                                <td class="tg-0pky">Band</td>
+                                <td class="tg-0pky">5G: N41; LTE: B2</td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">RSRP</td>
+                                <td class="tg-0pky">-80 or higher </td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">RSRQ</td>
+                                <td class="tg-0pky">-10 or higher</td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">SINR</td>
+                                <td class="tg-0pky">20 or higher</td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0lax">RSSI</td>
+                                <td class="tg-0lax">-75 or higher</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
