@@ -22,9 +22,14 @@ body {
     padding-right: 1em;
 }
 
+.marginright1em {
+    margin-right: 1em;
+}
+
 .paddingbottom2em {
     padding-bottom: 2em;
 }
+
 
 .tg {
     border-collapse: collapse;

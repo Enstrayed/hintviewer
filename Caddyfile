@@ -3,4 +3,14 @@
     file_server
 
     reverse_proxy /TMI/v1* 192.168.12.1:80
+    
+    handle /getip {
+        rewrite /getip /json
+        reverse_proxy /json https://wtfismyip.com
+    }
+
+    handle /getv4 {
+        rewrite /getv4 /json
+        reverse_proxy /json https://ipv4.wtfismyip.com
+    }
 }
