@@ -25,19 +25,19 @@
                         <tbody>
                             <tr>
                                 <td class="tg-0pky">Uptime</td>
-                                <td class="tg-0pky" id="uptime"></td>
+                                <td class="tg-0pky" id="uptimeformatted"></td>
                             </tr>
                             <tr>
-                                <td class="tg-0lax">Software Version</td>
-                                <td class="tg-0lax" id="softwareversion"></td>
-                            </tr>
-                            <tr>
-                                <td class="tg-0pky">Has IPv6?</td>
-                                <td class="tg-0pky" id="hasipv6"></td>
+                                <td class="tg-0lax">Uptime (Raw)</td>
+                                <td class="tg-0lax" id="uptime"></td>
                             </tr>
                             <tr>
                                 <td class="tg-0pky">APN</td>
                                 <td class="tg-0pky" id="apn"></td>
+                            </tr>
+                            <tr>
+                                <td class="tg-0pky">Software Version</td>
+                                <td class="tg-0pky" id="softwareversion"></td>
                             </tr>
                             <tr>
                                 <td class="tg-0lax">Serial</td>
@@ -131,8 +131,8 @@
                     </table>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="horizontallyalignthisshit">
+                <div class="paddingright1em">
                     <h3 class="nomargin">IP</h3>
                     <table class="tg">
                         <tbody>
@@ -143,6 +143,17 @@
                             <tr>
                                 <td class="tg-0pky">IP (force IPv4)</td>
                                 <td class="tg-0pky" id="ipaddrv4" style="display: none;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="nomargin">Backend</h3>
+                    <table class="tg">
+                        <tbody>
+                            <tr>
+                                <td class="tg-0pky">Last Restart</td>
+                                <td class="tg-0pky" id="lastrestart"></td>
                             </tr>
                         </tbody>
                     </table>

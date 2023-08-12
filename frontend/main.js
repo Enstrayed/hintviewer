@@ -13,7 +13,6 @@ async function getJsonFromWtfip(ver) {
 function reloadButton() {
     getJsonFromGateway().then(json => {
         const fieldBindings = {
-            "hasipv6": json.signal.generic.hasIPv6,
             "apn": json.signal.generic.apn,
             "uptime": json.time.upTime,
             "softwareversion": json.device.softwareVersion,
