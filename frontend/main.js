@@ -14,6 +14,7 @@ function reloadButton() {
     getJsonFromGateway().then(json => {
         const fieldBindings = {
             "apn": json.signal.generic.apn,
+            "uptimeformatted": formatUptime(json.time.upTime),
             "uptime": json.time.upTime,
             "softwareversion": json.device.softwareVersion,
             "serial": json.device.serial,
@@ -58,6 +59,22 @@ function sensitiveButton() {
         document.getElementById("sensitivebutton").innerHTML = "Show Sensitive"
     }
 }
+
+function formatUptime(uptime) { // This is so retarded I should never be allowed to write code ever again
+    let workingUptimeMinutes = uptime / 60
+
+    let workingUptimeHours = workingUptimeMinutes / 60
+    workingUptimeHours = workingUptimeHours.toString().split('.')
+
+    workingUptimeMinutes = Number(`.${workingUptimeHours[1]}`) * 60
+    workingUptimeMinutes = workingUptimeMinutes.toString().split('.')
+
+    workingUptimeSeconds = Number(`.${workingUptimeMinutes[1]}`) * 60
+    workingUptimeSeconds = Math.round(workingUptimeSeconds)
+    
+    return `${workingUptimeHours[0]}h ${workingUptimeMinutes[0]}m ${workingUptimeSeconds}s`
+}
+
 
 var sensitiveShown = false
 
