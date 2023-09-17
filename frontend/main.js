@@ -10,6 +10,7 @@ async function getJsonFromWtfip(ver) {
     }
 }
 
+
 function reloadButton() {
     getJsonFromGateway().then(json => {
         const fieldBindings = {
@@ -35,6 +36,8 @@ function reloadButton() {
         for (key in fieldBindings) {
             document.getElementById(key).innerHTML = fieldBindings[key]
         }
+
+        updateLastRestart()
     })
 }
 
@@ -75,6 +78,10 @@ function formatUptime(uptime) { // This is so retarded I should never be allowed
     return `${workingUptimeHours[0]}h ${workingUptimeMinutes[0]}m ${workingUptimeSeconds}s`
 }
 
+async function updateLastRestart() {
+    document.getElementById("lastrestart").innerHTML = await fetch("/lastrestart").then(res => {return res.text()})
+}
+
 
 var sensitiveShown = false
 
@@ -87,3 +94,4 @@ getJsonFromWtfip("v6").then(res => {
 getJsonFromWtfip("v4").then(res => {
     document.getElementById("ipaddrv4").innerHTML = res.YourFuckingIPAddress
 })
+

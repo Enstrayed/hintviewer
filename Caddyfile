@@ -3,6 +3,8 @@
     file_server
 
     reverse_proxy /TMI/v1* 192.168.12.1:80
+
+    reverse_proxy /lastrestart localhost:8082
     
     handle /getip {
         rewrite /getip /json
